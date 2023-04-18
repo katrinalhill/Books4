@@ -27,6 +27,9 @@ export const Browse = (props: BookProps) =>{
           <p>Publisher: {book.publisher}</p>
           <p> Genre: {book.genre}</p>  
           <button className="BookButton">Add to Cart</button>
+          <br/>
+          <br/>
+          <button className="BookButton">Remove from Cart</button>
 
         </div>
       ))}

@@ -35,7 +35,9 @@ export const Search= () =>{
               <p>Author: {book.author}</p>
               <p>Publisher: {book.publisher}</p>
               <button className="BookButton">Add to Cart</button>
-
+              <br/>
+          <br/>
+          <button className="BookButton">Remove from Cart</button>
             </div>
             
           ))}

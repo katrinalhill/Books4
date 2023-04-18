@@ -1,3 +1,10 @@
+FROM node:16-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
 
 # # Use Node.js v14 as the base image
 # FROM node:14
