@@ -10,10 +10,10 @@ import {Libraries} from "./Pages/Libraries";
 import {NewReleases} from "./Pages/NewReleases";
 import {Search} from "./Pages/Search";
 import {AboutUs} from "./Pages/AboutUs";
+import {Cart} from "./Pages/Cart";
 import {Login} from "./Pages/Login";
 import {BookContextProvider} from "./Component/BookContextProvider";
-import { LibraryProvider } from 'Component/LibraryProvider';
-
+import { LibraryProvider } from './Component/LibraryProvider';
 
 
 
@@ -32,6 +32,7 @@ function App() {
           <Route path = "/newrelease" element= {<NewReleases/>}/>
           <Route path = "/search" element= {<Search/>}/>
           <Route path = "/aboutus" element= {<AboutUs/>}/>
+          <Route path = "/cart" element= {<Cart/>}/>
           <Route path = "/login" element= {<Login/>}/>
         </Routes>
         </LibraryProvider>

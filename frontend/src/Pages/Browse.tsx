@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { BookContext } from 'Component/BookContextProvider';
+import {BookContext} from "../Component/BookContextProvider";
 
 interface BookProps {}
 
@@ -26,6 +26,8 @@ export const Browse = (props: BookProps) =>{
           <p>Author: {book.author}</p>
           <p>Publisher: {book.publisher}</p>
           <p> Genre: {book.genre}</p>  
+          <button className="BookButton">Add to Cart</button>
+
         </div>
       ))}
       </div>

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { BookContext } from 'Component/BookContextProvider';
+import { BookContext } from '../Component/BookContextProvider';
 
 interface Book {
   id: number;
@@ -24,7 +24,9 @@ export const Search= () =>{
 
   return (
     <div className="search-container">
+      <br/>
       <input className = "search-input" type="text" placeholder="Search by title or author" onChange={handleChange} />
+      <br/>
       {filteredBooks.length > 0 ? (
         <div className="book-list">
           {filteredBooks.map((book) => (
@@ -32,7 +34,10 @@ export const Search= () =>{
               <h2>{book.title}</h2>
               <p>Author: {book.author}</p>
               <p>Publisher: {book.publisher}</p>
+              <button className="BookButton">Add to Cart</button>
+
             </div>
+            
           ))}
         </div>
       ) : (

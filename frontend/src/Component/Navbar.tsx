@@ -33,6 +33,10 @@ export const Navbar= () =>{
         <List>About Us</List>
       </Link>
 
+      <Link to={`/cart`}>
+        <List>Cart</List>
+      </Link>
+
 
       <Link to={`/login`}>
         <List>Login</List>

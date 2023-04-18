@@ -5,7 +5,9 @@ export const NewReleases= () =>{
 
   return(
     <>
-      <h1> This is the NewRelase</h1>
+    <div className= "new-release-container"> 
+      <h1> Coming Soon </h1>
+      </div >
     </>
   )
 }
