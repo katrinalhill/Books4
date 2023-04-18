@@ -117,6 +117,8 @@
   ],
 
     "compilerOptions": {
-      "jsx": "react"
+      "jsx": "react",
+      "esModuleInterop": true,
     }
 }
+

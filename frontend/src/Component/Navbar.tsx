@@ -8,7 +8,7 @@ export const Navbar= () =>{
 
   return(
     <>
-
+<div className = "sidebar">
       <Link to={`/`}>
     <List> Home </List>
       </Link>
@@ -34,8 +34,11 @@ export const Navbar= () =>{
       </Link>
 
 
+      <Link to={`/login`}>
+        <List>Login</List>
+      </Link>
 
-
+      </div>
     </>
     )
 }

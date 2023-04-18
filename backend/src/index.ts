@@ -26,6 +26,53 @@ let books: Books[] = [
   {id: 4, title: "Python", author: "Jonathan Lumberton",publisher: "Ducks Enterprise", genre: "Non-Fiction", ibsn: 827263, date: "June 22 1987",loanStatus: false},
   {id: 5, title: "JavaScript",author: "Jack Henry", publisher:"Parks & Parks", genre: "Non-Fiction", ibsn: 6246372, date: "June 22 1987" ,loanStatus: true}
 ]
+
+type Library = {
+  name: string;
+  address: string;
+  books: string[];
+  employees: string[];
+  isOpen: boolean;
+}[];
+
+let library: Library = [
+  {
+    name: 'Central Library',
+    address: '123 Main St, Anytown USA',
+    books: ['The Great Gatsby', 'To Kill a Mockingbird', '1984'],
+    employees: ['John Smith', 'Jane Doe', 'Bob Johnson'],
+    isOpen: true,
+  },
+  {
+    name: 'North Branch Library',
+    address: '456 Maple Ave, Anytown USA',
+    books: ['The Catcher in the Rye', 'Pride and Prejudice', 'The Odyssey'],
+    employees: ['Samantha Brown', 'David Lee', 'Mary White'],
+    isOpen: false,
+  },
+  {
+    name: 'South Branch Library',
+    address: '789 Oak St, Anytown USA',
+    books: ['Moby Dick', 'Jane Eyre', 'The Adventures of Huckleberry Finn'],
+    employees: ['Tom Jones', 'Lisa Patel', 'Mike Davis'],
+    isOpen: true,
+  },
+  {
+    name: 'East Branch Library',
+    address: '321 Pine St, Anytown USA',
+    books: ['The Sun Also Rises', 'Wuthering Heights', 'The Count of Monte Cristo'],
+    employees: ['Amy Chen', 'Juan Rodriguez', 'Tina Nguyen'],
+    isOpen: true,
+  },
+  {
+    name: 'West Branch Library',
+    address: '654 Cedar St, Anytown USA',
+    books: ['Frankenstein', 'The Scarlet Letter', 'The Picture of Dorian Gray'],
+    employees: ['Bill Johnson', 'Karen Smith', 'Jose Ramirez'],
+    isOpen: false,
+  },
+];
+
 app.use(express.json());
 
 // app.get("/api/hello", (req, res) => {
@@ -130,6 +177,9 @@ app.put('/books/:id', (req, res) => {
 //
 //
 
+app.get('/library', (req, res) => {
+  res.json(library);
+});
 
 
 app.use('/', express.static(path.resolve(__dirname, 'client')));

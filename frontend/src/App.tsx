@@ -1,4 +1,6 @@
 import React from 'react';
+import "./styles/app.css";
+
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {Navbar} from "./Component/Navbar";
 import {Header} from "./Component/Header";
@@ -8,13 +10,19 @@ import {Libraries} from "./Pages/Libraries";
 import {NewReleases} from "./Pages/NewReleases";
 import {Search} from "./Pages/Search";
 import {AboutUs} from "./Pages/AboutUs";
-import {Fetches} from "./Component/Fetches";
+import {Login} from "./Pages/Login";
+import {BookContextProvider} from "./Component/BookContextProvider";
+import { LibraryProvider } from 'Component/LibraryProvider';
+
+
+
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Fetches/>
+      <BookContextProvider>
+      <LibraryProvider>
       <Header/>
       <Navbar/>
         <Routes>
@@ -24,7 +32,10 @@ function App() {
           <Route path = "/newrelease" element= {<NewReleases/>}/>
           <Route path = "/search" element= {<Search/>}/>
           <Route path = "/aboutus" element= {<AboutUs/>}/>
+          <Route path = "/login" element= {<Login/>}/>
         </Routes>
+        </LibraryProvider>
+        </BookContextProvider>
       </Router>
     </div>
   );

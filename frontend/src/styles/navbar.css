@@ -1,0 +1,28 @@
+.sidebar {
+  height: 100%; /* Set the height of the sidebar to 100% of the viewport */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Make the sidebar position fixed */
+  z-index: 1; /* Set the z-index of the sidebar to be above the content */
+  top: 0; /* Set the top position of the sidebar to 0 */
+  left: 0; /* Set the left position of the sidebar to 0 */
+  background-color: rgb(231, 103, 56); /* Set the background color of the sidebar */
+  overflow-x: hidden; /* Hide the horizontal scrollbar */
+  padding-top: 20px; /* Add padding to the top of the sidebar */
+  font-size: 30px;
+}
+
+.sidebar a {
+  display: block; /* Display the links as block elements */
+  color: #000; /* Set the color of the links */
+  padding: 16px; /* Add padding to the links */
+  text-decoration: none; /* Remove the underline from the links */
+}
+
+.sidebar a:hover {
+  background-color: #cdefce; /* Add a background color on hover */
+}
+
+.sidebar a.active {
+  background-color: orangered; /* Add a background color to the active link */
+  color: white; /* Set the color of the active link to white */
+}

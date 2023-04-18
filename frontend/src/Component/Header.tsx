@@ -7,7 +7,7 @@ export const Header= () =>{
 
   return(
     <>
-      <h1>The Orange Room Bookstore</h1>
+      <h1 className= "header">The Orange Room Bookstore</h1>
     </>
   )
 }

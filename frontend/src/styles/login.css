@@ -1,0 +1,130 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #ffc799, #ffffff);
+}
+
+.login-header {
+  font-size: 3rem;
+  color: #d68330;
+  text-shadow: 1px 1px 3px #ccc;
+  margin-bottom: 2rem;
+
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.login-button {
+  background-color: #006699;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #005580;
+}
+
+.login-message {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.login-message a {
+  color: #006699;
+  text-decoration: none;
+}
+
+.login-message a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+/* .login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.login-header {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+}
+
+.login-button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #005fa3;
+} */
