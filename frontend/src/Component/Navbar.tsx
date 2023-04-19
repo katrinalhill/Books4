@@ -29,9 +29,6 @@ export const Navbar= () =>{
         <List>Library Locations</List>
       </Link>
 
-      <Link to={`/aboutus`}>
-        <List>About Us</List>
-      </Link>
 
       <Link to={`/cart`}>
         <List>Cart</List>
@@ -42,6 +39,13 @@ export const Navbar= () =>{
         <List>Login</List>
       </Link>
 
+      <Link to={`/aboutus`}>
+        <List>About Us</List>
+      </Link>
+
+      <Link to={`/comment`}>
+        <List>Comments</List>
+      </Link>
       </div>
     </>
     )

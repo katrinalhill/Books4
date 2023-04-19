@@ -14,6 +14,7 @@ import {Cart} from "./Pages/Cart";
 import {Login} from "./Pages/Login";
 import {BookContextProvider} from "./Component/BookContextProvider";
 import { LibraryProvider } from './Component/LibraryProvider';
+import {Comment} from "./Pages/Comment"
 
 
 
@@ -34,6 +35,8 @@ function App() {
           <Route path = "/aboutus" element= {<AboutUs/>}/>
           <Route path = "/cart" element= {<Cart/>}/>
           <Route path = "/login" element= {<Login/>}/>
+          <Route path = "/comment" element={<Comment/>}/>
+
         </Routes>
         </LibraryProvider>
         </BookContextProvider>

@@ -66,7 +66,7 @@ export const Home= (props:BookProps) =>{
 
   return(
     <div className="home-page-container">
-      <h1 className="home-page-header">Welcome to The Orange Room</h1>
+      <h1 className="home-page-header">Welcome to The Orange Room BookStore</h1>
       <br/>
       <div className="home-page-text">
         Browse our collection of books and find your next favorite read!

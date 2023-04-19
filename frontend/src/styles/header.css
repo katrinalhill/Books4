@@ -6,6 +6,7 @@
 } */
 
 .header {
+  position:fixed;
   color:rgb(204, 89, 40);
   text-Align: right;
   font-Size: 4rem;
