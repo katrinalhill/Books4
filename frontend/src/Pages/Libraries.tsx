@@ -19,8 +19,8 @@ export const Libraries = () => {
         <div className="library-card" key={index}> {/* add a class name to the card div */}
           <h2>{library.name}</h2>
           <p>{library.address}</p>
-          <p>{library.books.join(', ')}</p>
-          <p>{library.employees.join(', ')}</p>
+          {/* <p>{library.books.join(', ')}</p> */}
+          {/* <p>{library.employees.join(', ')}</p> */}
           <p>{library.isOpen ? 'Open' : 'Closed'}</p>
         </div>
       ))}
