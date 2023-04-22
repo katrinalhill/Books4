@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  selector:
+    matchLabels:
+      app: my-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:latest
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: mypassword
+        - name: MYSQL_DATABASE
+          value: mydatabase
+        - name: MYSQL_USER
+          value: myuser
+        - name: MYSQL_PASSWORD
+          value: myuserpassword
+      - name: my-app
+        image: my-app-image:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MYSQL_HOST
+          value: mysql
+        - name: MYSQL_PORT
+          value: "3306"
+        - name: MYSQL_USER
+          value: myuser
+        - name: MYSQL_PASSWORD
+          value: myuserpassword
+      - name: random-microservice
+        image: random-microservice-image:latest
+        ports:
+        - containerPort: 8080
+      - name: frontend
+        image: frontend-image:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: BACKEND_HOST
+          value: random-microservice
+          # assuming the microservice exposes port 8080
+        - name: BACKEND_PORT
+          value: "8080"
+        - name: MYSQL_HOST
+          value: mysql
+        - name: MYSQL_PORT
+          value: "3306"
+        - name: MYSQL_USER
+          value: myuser
+        - name: MYSQL_PASSWORD
+          value: myuserpassword
+      imagePullSecrets:
+      - name: my-registry-secret
