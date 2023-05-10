@@ -1,6 +1,16 @@
 import http from "http";
 import express, { Request, Response } from 'express';
 import path from "path";
+import "reflect-metadata"
+
+// import { Book } from "../src/entities/Book";
+
+
+
+
+
+
+
 
 const output: string = "hello world!";
 let app = express();
@@ -338,20 +348,20 @@ server.listen(8080);
 
 // //PATCH
 
-// // app.patch('/books/:id', (req, res) => {
-// //
-// //   const {  id  } = req.params as {id: string};
-// //   // const { id } = books.id;
-// //   const {title } = req.body as {title:string};
-// //
-// //   books.forEach((book, index) => {
-// //     if (book.id == id) {
-// //       books[index].title = title;
-// //     }
-// //   });
-// //   const justAdded = books.find(book => book.id == id);
-// //   res.send(justAdded);
-// // })
+// app.patch('/books/:id', (req, res) => {
+//
+//   const {  id  } = req.params as {id: string};
+//   // const { id } = books.id;
+//   const {title } = req.body as {title:string};
+//
+//   books.forEach((book, index) => {
+//     if (book.id == id) {
+//       books[index].title = title;
+//     }
+//   });
+//   const justAdded = books.find(book => book.id == id);
+//   res.send(justAdded);
+// })
 
 
 // //DELETE
