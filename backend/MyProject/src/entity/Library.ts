@@ -22,6 +22,9 @@ export class Library {
   @Column()
   isOpen: boolean = true;
 
+  @Column()
+  hours: string = '';
+
   @OneToOne(()=>Book, book => book.library, {onDelete: 'CASCADE'})
   @JoinColumn()
   book: object = Book

@@ -16,4 +16,7 @@ export class User {
     @Column()
     age: number = 0;
 
+    @Column()
+    birthday: string = "";
+
 }
